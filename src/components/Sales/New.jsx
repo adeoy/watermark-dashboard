@@ -59,6 +59,11 @@ const New = ({ employee, uploadSale, staticData }) => {
 
   const employeeRoute = searchStaticData(staticData.routes, employee._id_route);
   const product = searchStaticData(staticData.products, form._id_product);
+
+  if (!product) {
+    return (<></>);
+  }
+
   const base_cost = form.units * product.price;
   const [offer_discount, _id_offer] = calcOfferDiscount(
     staticData.offers,

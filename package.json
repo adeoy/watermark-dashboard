@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@bit/adeoy.utils.data-table": "^0.2.2",
+    "@bit/adeoy.utils.data-table": "^0.2.3",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
