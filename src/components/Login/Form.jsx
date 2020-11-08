@@ -6,12 +6,14 @@ const Form = () => {
     email: "",
     password: "",
   });
+
   const onChangeForm = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
+  
   return (
     <BSForm>
       <FormGroup>

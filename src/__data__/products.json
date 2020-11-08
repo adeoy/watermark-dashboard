@@ -1,0 +1,45 @@
+{
+  "data": [
+    {
+      "_id": "5f9ee328b157a32c178f2cd8",
+      "comision": 3,
+      "image": "https://i.postimg.cc/6Qt4r4cm/garrafon.jpg",
+      "name": "Garrafón",
+      "price": 10,
+      "slug": "garrafon"
+    },
+    {
+      "_id": "5f9ee345b157a32c178f2cd9",
+      "comision": 0.5,
+      "image": "https://i.postimg.cc/k5s6fMhX/litro.jpg",
+      "name": "Litro",
+      "price": 0.5,
+      "slug": "litro"
+    },
+    {
+      "_id": "5f9ee35bb157a32c178f2cda",
+      "comision": 2,
+      "image": "https://i.postimg.cc/3xMvwcv7/botella.jpg",
+      "name": "Botella",
+      "price": 6,
+      "slug": "botella"
+    },
+    {
+      "_id": "5f9ee36eb157a32c178f2cdb",
+      "comision": 2.5,
+      "image": "https://i.postimg.cc/jSzJn4Hf/galon.jpg",
+      "name": "Galón",
+      "price": 8,
+      "slug": "galon"
+    },
+    {
+      "_id": "5f9ee38bb157a32c178f2cdc",
+      "comision": 2.5,
+      "image": "https://i.postimg.cc/6Qt4r4cm/garrafon.jpg",
+      "name": "Medio garrafón",
+      "price": 8,
+      "slug": "medio_garrafon"
+    }
+  ],
+  "message": "Datos obtenidos"
+}

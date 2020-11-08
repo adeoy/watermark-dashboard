@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "_id": "5f9ee46db157a32c178f2ce0",
+      "gas_charge": 0,
+      "name": "Local"
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2ce1",
+      "gas_charge": -1,
+      "name": "Ejido González"
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2ce2",
+      "gas_charge": 0,
+      "name": "González"
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2ce3",
+      "gas_charge": 1,
+      "name": "Santa Fé"
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2ce4",
+      "gas_charge": 1,
+      "name": "Menonitas"
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2ce5",
+      "gas_charge": 1,
+      "name": "Manuel"
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2ce6",
+      "gas_charge": 1,
+      "name": "Libramiento"
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2ce7",
+      "gas_charge": 2,
+      "name": "Graciano Sánchez"
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2ce8",
+      "gas_charge": 2,
+      "name": "Ruíz Cortínez"
+    }
+  ],
+  "message": "Datos obtenidos"
+}

@@ -18,7 +18,7 @@ const Header = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="light" light expand="md">
+    <Navbar color="light" light expand="md" className="mb-4">
       <NavbarBrand tag={Link} to="/">
         Waterline Dashboard
       </NavbarBrand>

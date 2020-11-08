@@ -1,4 +1,4 @@
-import { actions } from '../actions';
+import { actions } from "../actions";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -7,11 +7,21 @@ const reducer = (state, action) => {
         ...state,
         ...action.payload,
       };
-      case actions.addSale:
-        return {
-          ...state,
-          sales: [...state.sales, action.payload],
-        };
+    case actions.addSale:
+      return {
+        ...state,
+        sales: [...state.sales, action.payload],
+      };
+    case actions.setEmployee:
+      return {
+        ...state,
+        employee: { ...state.employee, ...action.payload },
+      };
+    case actions.setSettings:
+      return {
+        ...state,
+        settings: { ...state.settings, ...action.payload }
+      };
     case actions.setModalOpen:
       return {
         ...state,
@@ -28,4 +38,3 @@ const reducer = (state, action) => {
 };
 
 export default reducer;
-

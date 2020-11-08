@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "_id": "5f9ee402b157a32c178f2cdd",
+      "_id_route": "5f9ee46db157a32c178f2ce0",
+      "comision": false,
+      "name": "Héctor Hugo",
+      "type": "local"
+    },
+    {
+      "_id": "5f9ee402b157a32c178f2cde",
+      "_id_route": "5f9ee46db157a32c178f2ce0",
+      "comision": false,
+      "name": "Dulce Anahí",
+      "type": "local"
+    },
+    {
+      "_id": "5f9ee402b157a32c178f2cdf",
+      "_id_route": "5f9ee46db157a32c178f2ce1",
+      "comision": false,
+      "name": "Jovanny",
+      "type": "delivery"
+    }
+  ],
+  "message": "Datos obtenidos"
+}

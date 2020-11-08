@@ -1,0 +1,47 @@
+{
+  "data": [
+    {
+      "_id": "5f9ee532b157a32c178f2cea",
+      "data": {
+        "employee_type": "delivery",
+        "max": 8,
+        "min": 6,
+        "products_names": [
+          "garrafon"
+        ]
+      },
+      "discount": 1,
+      "name": "Entre 6 y menos de 8",
+      "type": "min_max"
+    },
+    {
+      "_id": "5f9ee532b157a32c178f2ceb",
+      "data": {
+        "employee_type": "delivery",
+        "max": 10,
+        "min": 8,
+        "products_names": [
+          "garrafon"
+        ]
+      },
+      "discount": 2,
+      "name": "Entre 8 y menos de 10",
+      "type": "min_max"
+    },
+    {
+      "_id": "5f9ee532b157a32c178f2cec",
+      "data": {
+        "employee_type": "delivery",
+        "max": 26,
+        "min": 10,
+        "products_names": [
+          "garrafon"
+        ]
+      },
+      "discount": 3,
+      "name": "Entre 10 y menos de 26",
+      "type": "min_max"
+    }
+  ],
+  "message": "Datos obtenidos"
+}

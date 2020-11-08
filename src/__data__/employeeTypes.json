@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "_id": "5f9ee532b157a32c178f2ca1",
+      "name": "Local",
+      "comision": false
+    },
+    {
+      "_id": "5f9ee532b157a32c178f2ca2",
+      "name": "Repartidor",
+      "comision": true
+    }
+  ],
+  "message": "Datos obtenidos"
+}

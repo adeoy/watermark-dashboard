@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "_id": "5f9ee4fbb157a32c178f2ce9",
+      "data": {
+        "get": 3,
+        "pay": 2
+      },
+      "date": {
+        "from": "2020-10-21T15:00:00.000Z",
+        "to": "2020-10-23T23:00:00.000Z"
+      },
+      "name": "Inauguración",
+      "type": "axb"
+    },
+    {
+      "_id": "5f9ee4fbb157a32c178f2cf1",
+      "name": "3er compra",
+      "type": "xfree",
+      "data": {
+        "units": 1
+      }
+    }
+  ],
+  "message": "Datos obtenidos"
+}

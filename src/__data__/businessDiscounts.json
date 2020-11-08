@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "_id": "5f9ee46db157a32c178f2df1",
+      "name": "menos1",
+      "discount": 1.0
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2df2",
+      "name": "menos2",
+      "discount": 2.0
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2df3",
+      "name": "menos3",
+      "discount": 3.0
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2df4",
+      "name": "menos4",
+      "discount": 4.0
+    },
+    {
+      "_id": "5f9ee46db157a32c178f2df5",
+      "name": "menos5",
+      "discount": 5.0
+    }
+  ],
+  "message": "Datos obtenidos"
+}
