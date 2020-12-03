@@ -3,15 +3,43 @@ import { connect } from "react-redux";
 import { Form as BSForm, FormGroup, Input, Label } from "reactstrap";
 
 import { formatMoney } from "../../util/index";
-import { setEmployee, setSettings } from "../../actions/index";
+import { patchEmployee, setSettings } from "../../actions/index";
+import { searchStaticData } from "../../util/local";
 
-const Form = ({ employee, staticData, settings, setEmployee, setSettings }) => {
+const Form = ({
+  employee,
+  staticData,
+  settings,
+  patchEmployee,
+  setSettings,
+}) => {
   if (!staticData.employeeTypes) {
     return <></>;
   }
+
+  const employeeType = searchStaticData(
+    staticData.employeeTypes,
+    employee._id_type
+  );
+
   const onChangeEmployee = (e) => {
-    setEmployee({
+    patchEmployee(employee._id, {
       [e.target.name]: e.target.value,
+    });
+  };
+
+  const onChangeEmployeeType = (e) => {
+    const _id_type = e.target.value;
+    let _id_route = employee._id_route;
+
+    // Si es Colaborador en el Local
+    if (_id_type === "5fa80c486e76d16d62e818a3") {
+      _id_route = "5f9ee46db157a32c178f2ce0"; // Entonces ruta Local
+    }
+
+    patchEmployee(employee._id, {
+      _id_type,
+      _id_route,
     });
   };
 
@@ -40,7 +68,7 @@ const Form = ({ employee, staticData, settings, setEmployee, setSettings }) => {
           name="_id_type"
           id="slcEmployeeType"
           value={employee._id_type}
-          onChange={onChangeEmployee}
+          onChange={onChangeEmployeeType}
         >
           {staticData.employeeTypes.map((item) => (
             <option key={item._id} value={item._id}>
@@ -49,22 +77,24 @@ const Form = ({ employee, staticData, settings, setEmployee, setSettings }) => {
           ))}
         </Input>
       </FormGroup>
-      <FormGroup>
-        <Label for="slcEmployeeIdRoute">Ruta:</Label>
-        <Input
-          type="select"
-          name="_id_route"
-          id="slcEmployeeIdRoute"
-          value={employee._id_route}
-          onChange={onChangeEmployee}
-        >
-          {staticData.routes.map((item) => (
-            <option key={item._id} value={item._id}>
-              {item.name} {formatMoney(item.gas_charge)}
-            </option>
-          ))}
-        </Input>
-      </FormGroup>
+      {employeeType.name === "Repartidor" && (
+        <FormGroup>
+          <Label for="slcEmployeeIdRoute">Ruta:</Label>
+          <Input
+            type="select"
+            name="_id_route"
+            id="slcEmployeeIdRoute"
+            value={employee._id_route}
+            onChange={onChangeEmployee}
+          >
+            {staticData.routes.map((item) => (
+              <option key={item._id} value={item._id}>
+                {item.name} {formatMoney(item.gas_charge)}
+              </option>
+            ))}
+          </Input>
+        </FormGroup>
+      )}
       <FormGroup>
         <Label for="slcIdOffer">Promoción:</Label>
         <Input
@@ -112,7 +142,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-  setEmployee,
+  patchEmployee,
   setSettings,
 };
 

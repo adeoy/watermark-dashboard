@@ -4,7 +4,7 @@ const initialState = {
   employee: {
     _id: "5f9ee402b157a32c178f2cdd",
     name: "Héctor Hugo",
-    _id_type: "5f9ee532b157a32c178f2ca1",
+    _id_type: "5fa80c486e76d16d62e818a3",
     _id_route: "5f9ee46db157a32c178f2ce0",
   },
   settings: {
@@ -19,9 +19,9 @@ const initialState = {
     routes: [],
     employees: [],
     businessDiscounts: [],
+    employeeTypes: [],
+    expenseTypes: [],
   },
-
-  modalOpen: false,
   error: false,
 };
 

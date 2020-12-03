@@ -80,3 +80,19 @@ export const priceToShow = (
     return price + comision;
   }
 };
+
+export const countGarrafones = (sales) => {
+  if (sales.length === 0) return 0;
+  return sales.reduce((acc, sale) => (
+    sale.product_name === 'garrafon' ? acc + sale.units : acc), 0);
+};
+
+export const countComisiones = (sales) => {
+  if (sales.length === 0) return 0;
+  return sales.reduce((acc, sale) => (
+    sale.employee.comision ? acc +
+      sale.product_comision * sale.units -
+      (sale.offerDiscount / sale.product_price) * sale.product_comision
+      : acc
+  ), 0);
+}

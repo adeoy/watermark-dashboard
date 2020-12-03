@@ -1,3 +1,7 @@
 {
-  "files.associations": { "*.jsx": "javascriptreact" }
+  "files.associations": { "*.jsx": "javascriptreact" },
+  "editor.formatOnSave": false,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  }
 }

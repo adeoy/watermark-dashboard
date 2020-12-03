@@ -1,5 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSave, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import {
   Button,
   Modal as BSModal,
@@ -7,8 +8,6 @@ import {
   ModalFooter,
   ModalHeader,
 } from "reactstrap";
-
-import { setModalOpen } from "../../actions/index";
 
 const Modal = ({
   modalOpen,
@@ -26,24 +25,14 @@ const Modal = ({
       <ModalBody>{children}</ModalBody>
       <ModalFooter>
         <Button color="primary" onClick={submit} disabled={!submitEnable}>
-          {submitTitle}
+        <FontAwesomeIcon icon={faSave} /> {submitTitle}
         </Button>{" "}
         <Button color="secondary" onClick={toggle}>
-          Cancelar
+          <FontAwesomeIcon icon={faTimesCircle} /> Cancelar
         </Button>
       </ModalFooter>
     </BSModal>
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    modalOpen: state.modalOpen,
-  };
-};
-
-const mapDispatchToProps = {
-  setModalOpen,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+export default Modal;

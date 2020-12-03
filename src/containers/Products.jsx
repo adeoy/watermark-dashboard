@@ -3,23 +3,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { Button, Col, Row } from "reactstrap";
 
-import New from "../components/Sales/New";
-import Data from "../components/Sales/Data";
+import New from "../components/Products/New";
+import Data from "../components/Products/Data";
 
 const defaultForm = {
-  _id_product: "5f9ee328b157a32c178f2cd8",
-  units: 0,
-  pay_received: 0.0,
+  image: "",
+  name: "",
+  price: 0.0,
+  slug: "",
+  comision: 3,
 };
 
-const Sales = () => {
+const Products = () => {
   const [form, setForm] = useState(defaultForm);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const nuevaVenta = () => {
+  const newProduct = () => {
     setModalOpen(true);
     setForm(defaultForm);
-  }
+  };
 
   return (
     <div>
@@ -27,8 +29,8 @@ const Sales = () => {
 
       <Row className="mb-4">
         <Col xs="12" md={{ size: 4, offset: 8 }} lg={{ size: 2, offset: 10 }}>
-          <Button color="success" onClick={nuevaVenta} block>
-            <FontAwesomeIcon icon={faPlusCircle} /> Nueva Venta
+          <Button color="success" onClick={newProduct} block>
+            <FontAwesomeIcon icon={faPlusCircle} /> Nuevo producto
           </Button>
         </Col>
       </Row>
@@ -42,4 +44,4 @@ const Sales = () => {
   );
 };
 
-export default Sales;
+export default Products;
